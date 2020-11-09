@@ -5,7 +5,6 @@ import Dropdown from "./components/Dropdown/Dropdown";
 import Translate from "./components/Translator/Translate";
 import VideoSearch from "./components/VideoSearch/VideoSearch";
 import ImageSearch from "./components/ImageSearch/ImageSearch";
-import Notes from "./components/Notes/Notes";
 import Route from "./Navigation/Route";
 import Header from "./Navigation/Header";
 
