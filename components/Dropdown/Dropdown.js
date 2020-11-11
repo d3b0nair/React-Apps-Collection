@@ -43,7 +43,7 @@ function Dropdown({ title, options, selected, onSelectedChange }) {
             onClick={() => setOpen(!open)}
             className={`ui selection dropdown ${open ? "visible active" : ""}`}
           >
-            <i className="dropdown icon"></i>
+            <i className="world teal icon"></i>
             <div className="text">{selected.label}</div>
             <div className={`menu ${open ? "visible transition" : ""}`}>
               {renderedOptions}

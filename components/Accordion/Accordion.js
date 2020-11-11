@@ -23,7 +23,7 @@ function Accordion({ items }) {
     );
   });
   return (
-    <div className="ui styled accordion container">
+    <div className="ui styled accordion container" style={{ marginTop: "30px" }}>
       {RenderedItems}
     </div>
   );

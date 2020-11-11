@@ -66,17 +66,20 @@ function Search() {
     }
   );
   return (
-    <div className="ui container">
-      <div className="ui form">
-        <div className="field">
-          <label>
-            Enter Search Term
-            <input
-              className="input"
-              value={search}
-              onChange={(evt) => setSearch(evt.target.value)}
-            />
-          </label>
+    <div className="ui container" style={{ marginTop: "30px" }}>
+      <div className="ui segment">
+        <div className="ui form">
+          <div className="field">
+            <label>Enter Search Term</label>
+            <div className="ui fluid action input">
+              <input
+                type="text"
+                placeholder="Search..."
+                value={search}
+                onChange={(evt) => setSearch(evt.target.value)}
+              />
+            </div>
+          </div>
         </div>
       </div>
       <div className="ui celled list">{renderedSearchResults}</div>

@@ -8,10 +8,10 @@ class SearchBar extends React.Component {
   render() {
     return (
       <div className="ui segment">
-        <form onSubmit={this.onFormSubmit} className="ui form">
+        <div onSubmit={this.onFormSubmit} className="ui form">
           <div className="field">
             <label>Image Search</label>
-            <div className="ui action input">
+            <div className="ui fluid action input">
               <input
                 type="text"
                 placeholder="Search..."
@@ -25,7 +25,7 @@ class SearchBar extends React.Component {
               </button>
             </div>
           </div>
-        </form>
+        </div>
       </div>
     );
   }

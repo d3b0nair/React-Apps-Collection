@@ -11,7 +11,7 @@ class SearchBar extends React.Component {
         <form onSubmit={this.onFormSubmit} className="ui form">
           <div className="field">
             <label>Video Search</label>
-            <div className="ui action input loading">
+            <div className="ui fluid action input loading">
               <input
                 type="text"
                 placeholder="Search..."

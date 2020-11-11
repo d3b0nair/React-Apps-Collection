@@ -1,42 +1,44 @@
-import React, { useState } from "react";
+import React from "react";
 import Accordion from "./components/Accordion/Accordion";
 import Search from "./components/Wikipedia/Search";
-import Dropdown from "./components/Dropdown/Dropdown";
 import Translate from "./components/Translator/Translate";
 import VideoSearch from "./components/VideoSearch/VideoSearch";
 import ImageSearch from "./components/ImageSearch/ImageSearch";
 import Route from "./Navigation/Route";
 import Header from "./Navigation/Header";
 
-const items = [
-  { title: "test1", content: "test1" },
-  { title: "test2", content: "test2" },
-  { title: "test3", content: "test3" },
-];
-const options = [
-  { label: "test1", value: "test1" },
-  { label: "test2", value: "test2" },
-  { label: "test3", value: "test3" },
+const descriptions = [
+  {
+    title: "Translation App",
+    content:
+      "This React app uses the  Microsoft Azure Translator API to provide translation from one language to another.",
+  },
+  {
+    title: "Wiki Search App",
+    content:
+      "This React app uses the Wikipedia API to search for queries in wiki articles. Rendered results highlight the matched query in found wiki articles.",
+  },
+  {
+    title: "Video Search App",
+    content:
+      "This React app uses the YouTube API to search for videos upon the user's query and rendering the results by embedding video directly on a page.",
+  },
+  {
+    title: "Image Search App",
+    content:
+      "This React app uses Unsplash API to search for images and render them.",
+  },
 ];
 
 export default () => {
-  const [selected, setSelected] = useState(options[0]);
   return (
-    <div>
+    <div className="ui container">
       <Header />
       <Route path="/">
-        <Accordion items={items} />
+        <Accordion items={descriptions} />
       </Route>
-      <Route path="/list">
+      <Route path="/wiki">
         <Search />
-      </Route>
-      <Route path="/dropdown">
-        <Dropdown
-          label="test"
-          options={options}
-          selected={selected}
-          onSelectedChange={setSelected}
-        />
       </Route>
       <Route path="/translate">
         <Translate />

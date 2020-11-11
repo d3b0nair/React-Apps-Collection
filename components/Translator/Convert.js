@@ -24,7 +24,7 @@ function Convert({ language, text, translateTo }) {
       },
       headers: {
         "content-type": "application/json",
-        "Ocp-Apim-Subscription-Key": "API-KEY",
+        "Ocp-Apim-Subscription-Key": "",
         "Ocp-Apim-Subscription-Region": "eastus",
       },
       data: [{ Text: debounceText }],

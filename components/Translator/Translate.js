@@ -1,28 +1,15 @@
 import React, { useState } from "react";
 import Dropdown from "../Dropdown/Dropdown";
 import Convert from "./Convert";
-const options = [
-  {
-    label: "Russian",
-    value: "ru",
-  },
-  {
-    label: "English",
-    value: "en",
-  },
-  {
-    label: "Hindi",
-    value: "hi",
-  },
-];
+import options from "./Languages"
 function Translate() {
   const [language, setLanguage] = useState(options[1]);
   const [translateTo, setTranslateTo] = useState(options[0]);
   const [text, setText] = useState("Hello");
   return (
-    <div>
+    <div style={{ marginTop: "30px" }}>
       <div className="ui form container">
-        <div className="ui horizontal segments">
+        <div className="ui horizontal segments container">
           <div className="ui center aligned green segment">
             <h5 className="ui header">Enter text to translate:</h5>
             <textarea
@@ -32,7 +19,7 @@ function Translate() {
               }}
             />
           </div>
-          <div className="ui center aligned yellow segment">
+          <div className="ui center aligned yellow segment container">
               <Dropdown
                 options={options}
                 selected={language}
@@ -46,7 +33,7 @@ function Translate() {
                 title="Translate to:"
               />
           </div>
-          <div className="ui center aligned blue segment">
+          <div className="ui center aligned blue segment container">
             <h5 className="ui  header">Translation to {translateTo.label}:</h5>
             <Convert
               text={text}
@@ -59,5 +46,4 @@ function Translate() {
     </div>
   );
 }
-//<Convert text={text} language={language} translateTo={translateTo} />
 export default Translate;
